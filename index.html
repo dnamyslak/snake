@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gra w węża | DN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>Gra w Węża</h1>
+    <div class="game-container__item">Level: <span id="js-game-level">1</span></div>
+    <div class="game-container__item">Score: <span id="js-game-score">0</span></div>
+
+    <h2>Legenda</h2>
+    <div class="game-wrapper-legend">
+        <div class="game-container__color"></div>
+        <div class="game-container__name">Jabłko ( +1 pkt )</div>
+    </div>
+
+    <div class="game-wrapper-legend">
+        <div class="game-container__color game-container__color--bonus"></div>
+        <div class="game-container__name">Dojrzałe jabłko ( +5 pkt )</div>
+    </div>
+
+    <div class="game-wrapper-legend">
+        <div class="game-container__color game-container__color--shorten"></div>
+        <div class="game-container__name">Zgniłe jabłko ( Wąż -1 na długości )</div>
+    </div>
+
+    <div class="game-wrapper-legend">
+        <div class="game-container__color game-container__color--faster"></div>
+        <div class="game-container__name">Szybkie jabłko ( Wąż szybszy na 5 sek )</div>
+    </div>
+
+    <div class="game-wrapper-legend">
+        <div class="game-container__color game-container__color--slower"></div>
+        <div class="game-container__name">Wolne jabłko ( Wąż wolniejszy na 5 sek )</div>
+    </div>
+
+    <hr>
+
+    <form action="" method="post" class="form">
+        <div class="form__group">
+            <label for="f-level" class="form__label">Choose starting level:</label>
+            <div class="form__field">
+                <div class="select">
+                    <select name="f-level" class="form__select" id="f-level" onchange="checkLevel()">
+                        <option value="1">Level 1</option>
+                        <option value="2">Level 2</option>
+                        <option value="3">Level 3</option>
+                        <option value="4">Level 4</option>
+                        <option value="5">Level 5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+
+    <a class="game-start-button" id="start">START</a>
+
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
